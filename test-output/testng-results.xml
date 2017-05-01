@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="43878" started-at="2017-05-01T17:33:48Z" finished-at="2017-05-01T17:34:32Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="43878" started-at="2017-05-01T17:33:48Z" finished-at="2017-05-01T17:34:32Z">
+      <class name="com.datalicious.Assignment.test.Task1">
+        <test-method status="PASS" signature="setDriver()[pri:0, instance:com.datalicious.Assignment.test.Task1@1a968a59]" name="setDriver" is-config="true" duration-ms="2767" started-at="2017-05-01T23:03:48Z" finished-at="2017-05-01T23:03:51Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setDriver -->
+        <test-method status="PASS" signature="verifyhomepage()[pri:0, instance:com.datalicious.Assignment.test.Task1@1a968a59]" name="verifyhomepage" duration-ms="39838" started-at="2017-05-01T23:03:51Z" finished-at="2017-05-01T23:04:31Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyhomepage -->
+        <test-method status="PASS" signature="shutDriver()[pri:0, instance:com.datalicious.Assignment.test.Task1@1a968a59]" name="shutDriver" is-config="true" duration-ms="1256" started-at="2017-05-01T23:04:31Z" finished-at="2017-05-01T23:04:32Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- shutDriver -->
+      </class> <!-- com.datalicious.Assignment.test.Task1 -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
