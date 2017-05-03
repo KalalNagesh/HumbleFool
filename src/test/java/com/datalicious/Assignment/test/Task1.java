@@ -1,5 +1,7 @@
 package com.datalicious.Assignment.test;
 
+import java.util.concurrent.TimeUnit;
+
 import org.openqa.selenium.Dimension;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.phantomjs.PhantomJSDriver;
@@ -19,7 +21,7 @@ public class Task1 {
 	GooglePage gPage;
 	DataliciousPage dPage;
 	WebDriver driver;
-	
+	String url = "";
 	@BeforeTest
 	public void setDriver(){
 			driver = new PhantomJSDriver(abc.setdesiredcaps());
@@ -30,30 +32,30 @@ public class Task1 {
 		gPage = new GooglePage(driver);
 		dPage = new DataliciousPage(driver);
 		
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		
 		driver.get("https://www.google.com");
 		driver.getTitle();
 		Assert.assertEquals("Google", driver.getTitle());
 		Utility.cpaturescreenshot(driver, "googletitle");
-		Thread.sleep(3000);
 		gPage.putdata();
 		gPage.enterdata();
-		Thread.sleep(2000);
 		Utility.cpaturescreenshot(driver, "organicsearchResult");
 		gPage.resultsearch();
-		Thread.sleep(2000);
 		System.out.println(driver.getTitle());
 		Assert.assertEquals("Smarter Marketing | Datalicious", driver.getTitle());
 		driver.manage().window().setSize(d);
 		dPage.cliclmenu();
-		Thread.sleep(2000);
 		Utility.cpaturescreenshot(driver, "MenuPage");
 		dPage.clickGA();
 		Thread.sleep(2000);
-	    String url=	driver.getCurrentUrl();
+	    url=	driver.getCurrentUrl();
 		System.out.println(url);	
 	}
 	@AfterTest
-	
+	public String getURL(){
+		return url;
+	}
 	public void shutDriver(){
 		driver.quit();
 	}
